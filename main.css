@@ -78,12 +78,13 @@ h3 { font-size: var(--fs-h3) }
 .nav {
 	display: flex;
 	justify-content: space-between;
-	font-family: var (--ff-secondary);
+	font-family: var(--ff-secondary);
 }
 
 .nav__list {
 	text-decoration: none;
-	text-transform: uppercase;
+    text-transform: uppercase;
+    color: var(--clr-dark);
 }
 
 .nav__item > li {
@@ -109,12 +110,16 @@ section {
 }
 
 section:nth-child(even) {
-	background-color: #dddddd;
+    background-color: #dddddd;
+}
+
+section > p {
+    text-align: center;
 }
 
 ul {
-	list-style-type: disc;
-	padding-left: 1.25rem;
+    list-style-type: none;
+    text-align: center;
 }
 
 * + ul {
