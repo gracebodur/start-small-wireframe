@@ -4,9 +4,10 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-		<title>Search Page</title>
+		<title>Start Small</title>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
-		<link href="https://fonts.googleapis.com/css?family=Lora:400,700|Roboto+Slab:400,700&display=swap" rel="stylesheet">  
+		<link href="https://fonts.googleapis.com/css?family=Lora:400,700|Roboto+Slab:400,700&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
 		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 		<link rel="stylesheet" href="main.css" />
 	</head>
@@ -14,16 +15,9 @@
 	<header>
 		<nav class='nav'>
 		<div class='logo'>
-			<a href="#landing">
+			<a href="#search">
 				<img src='./img/start-small-logo.png' alt="logo">
 			</a>
-		</div>
-		<div class='nav__list'>
-			<a href="./search-page.html">
-				<button class='btn'>
-				Find a classroom to support
-				</button>
-		</a>
 		</div>
 			<p class="nav__item">
 				<a 
@@ -35,98 +29,187 @@
 			</p>
 			<p class="nav__item">
 				<a 
-					href="#register-signin" 
-					class="nav__list" onclick="document.getElementById('id01').style.display='block'">
-					Register | Log in
+					href="#register" 
+					class="nav__list" onclick="document.getElementById('id02').style.display='block'">
+					Register
+				</a>
+			</p>
+			<p class="nav__item">
+				<a 
+					href="#log-in" 
+					class="nav__list" onclick="document.getElementById('id03').style.display='block'">
+					Log in
 				</a>
 			</p>
 		</nav>
-		<!-- Modal -->
+		<!-- Donate Modal--> 
 			<div id="id01" class="w3-modal">
-				<div class="w3-modal-content w3-card-4 w3-animate-zoom" style="max-width:600px">
+				<div class="w3-modal-content w3-card-4 w3-animate-zoom" style="max-width: 50vh;">
 			  		<div class="w3-center"><br>
 						<span 
 							onclick="document.getElementById('id01').style.display='none'" 
-							class="w3-button w3-xlarge w3-hover-red w3-display-topright" 
+							class="w3-button w3-xlarge w3-hover-grey w3-display-topright" 
 							title="Close Modal">&times;
 						</span>
-						<h3>Log in</h3>
-			  		</div>
-				<form class="w3-container" action="/action_page.php">
-				<div class="w3-section">
-				  <label><b>Username</b></label>
-				  <input 
-					  class="w3-input w3-border w3-margin-bottom" 
-					  type="text" 
-					  placeholder="Enter Username" 
-					  name="usrname" 
-					  required>
-				  <label><b>Password</b></label>
-				  <input 
-					  class="w3-input w3-border" 
-					  type="password" 
-					  placeholder="Enter Password" 
-					  name="psw" 
-					  required>
-				  <button 
-					  class="w3-button w3-block w3-grey w3-section w3-padding" 
-					  type="submit">
-					  Login
-					</button>
-				  <input 
-					  class="w3-check w3-margin-top" 
-					  type="checkbox" 
-					  checked="checked"> 
-					  Remember me
+						<h3>Please Register or Log in</h3>
+					  </div>
+					</div>
 				</div>
-			  </form>
-		
-			  <div class="w3-container w3-border-top w3-padding-16 w3-light-grey">
+			<!-- End of Donate Modal -->
+
+			<!-- Register Modal -->
+			<div id="id02" class="w3-modal">
+				<div class="w3-modal-content w3-card-4 w3-animate-zoom" style="max-width:600px">
+					<div class="w3-center"><br>
+					<span 
+						onclick="document.getElementById('id02').style.display='none'" 
+						class="w3-button w3-xlarge w3-hover-red w3-display-topright" 
+						title="Close Modal">&times;
+					</span>
+						<h3>Register</h3>
+						<p>Please fill in this form to create an account.</p>
+					</div>
+				<form class="w3-container" method="post" target="_blank">
+					<div class="w3-section">
+					<label><b>First name</b></label>
+				  	<input 
+					  	class="w3-input w3-border w3-margin-bottom" 
+					  	type="text" 
+					  	placeholder="Enter your first name" 
+					  	name="fname" 
+						  required>
+					<label><b>Last name</b></label>
+					<input 
+						class="w3-input w3-border w3-margin-bottom" 
+						type="text" 
+						placeholder="Enter your last name" 
+						name="e-mail" 
+						required>
+					<label><b>User name</b></label>
+					<input 
+						class="w3-input w3-border w3-margin-bottom" 
+						type="text" 
+						placeholder="Enter your user name" 
+						name="e-mail" 
+						required>
+				  	<label><b>E-mail address</b></label>
+				  	<input 
+					  	class="w3-input w3-border w3-margin-bottom" 
+					  	type="text" 
+					  	placeholder="Enter e-mail address" 
+					  	name="e-mail" 
+					  	required>
+				  	<label><b>Password</b></label>
+				  	<input 
+						class="w3-input w3-border" 
+						type="password" 
+						placeholder="Enter Password" 
+						name="psw" 
+						required>
+				  	<button 
+					  	class="w3-button w3-block w3-grey w3-section w3-padding" 
+					  	type="submit">
+					  	Register
+					</button>
+					</div>
+			  	</form>
+			  	<div class="w3-container w3-border-top w3-padding-16 w3-light-grey">
+					<button 
+						onclick="document.getElementById('id02').style.display='none'" 
+						type="button" 
+						class="w3-button w3-grey">
+						Cancel
+					</button>
+			  	</div>
+			</div>
+		</div>
+	</div>
+	<!-- End of Register Modal-->
+
+	<!-- Log in Modal -->
+		<div id="id03" class="w3-modal">
+			<div class="w3-modal-content w3-card-4 w3-animate-zoom" style="max-width:600px">
+				<div class="w3-center"><br>
+					<span 
+						onclick="document.getElementById('id03').style.display='none'" 
+						class="w3-button w3-xlarge w3-hover-red w3-display-topright" 
+						title="Close Modal">&times;
+					</span>
+						<h3>Log in</h3>
+				</div>
+			<form class="w3-container" method="post" target="_blank">
+				<div class="w3-section">
+			  	<label><b>Username</b></label>
+			  	<input 
+					class="w3-input w3-border w3-margin-bottom" 
+					type="text" 
+					placeholder="Enter Username" 
+					name="usrname" 
+					required>
+			  	<label><b>Password</b></label>
+			  	<input 
+					class="w3-input w3-border" 
+					type="password" 
+					placeholder="Enter Password" 
+					name="psw" 
+					required>
+			  	<button 
+				  	class="w3-button w3-block w3-grey w3-section w3-padding" 
+				  	type="submit">
+				  	Login
+				</button>
+			  	<input 
+					class="w3-check w3-margin-top" 
+					type="checkbox" 
+					checked="checked"> 
+					Remember me
+				</div>
+		  	</form>
+		  		<div class="w3-container w3-border-top w3-padding-16 w3-light-grey">
 				<button 
-					onclick="document.getElementById('id01').style.display='none'" 
+					onclick="document.getElementById('id03').style.display='none'" 
 					type="button" class="w3-button w3-grey">
 					Cancel
 				</button>
-				<span class="w3-right w3-padding w3-hide-small">Forgot <a href="#">password?</a></span>
-			  </div>
-		
+		  		</div>
 			</div>
-		  </div>
-		</div>
+  		</div>
+	</div>
 	</header>
-	<!-- Intro -->
-	<section role="banner" id='landing'>
-		<h1 class='center'>Start Small</h1>
-		<h3 class='center'>Make a big difference!</h3>
-		<div class='center'>
-			<ul>
-				<li>Pick a classroom project for your friends to support.</li>
-				<li>Add a personal message.</li>
-				<li>See your impact!</li>
-			</ul>
-		</div>
+<!-- End of Log in Modal -->
+
+<!-- Search Field -->
+	<section class='search-field'>
+	<form
+		class="search"
+		action="" >
+		<input 
+			type="search"
+			placeholder="Search for a school or classroom project" 
+			name="projectsearch">
+			near
+		<input 
+			type="search"
+			placeholder="city or state" 
+			name="location">
+		<button type="submit"><i class="fa fa-search">Search</i></button>
+	  </form>
 	</section>
+<!-- End of Search Button -->
+
+<!-- Feature classroom -->
 	<section>
-		<p>"Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-			Laborum veniam quos atque nisi excepturi delectus pariatur placeat, 
-			veritatis in consectetur!"</p>
-		<p>[placeholder for a fullfillment description from classroom teachers]</p>
-		<div class='center'>
-			<p>[place holder for an image of a classroom that needs funding]</p>
+		<div>
+			<p>[Name of school]</p>
+		<div>
+			<p>[fullfillment description from classroom teachers]</p>
+		</div>
+		<div>
+			<img src="https://bhmsmiles.com/wp-content/uploads/2016/12/grey-box-placeholder.jpg" alt="image">[image of a classroom that needs funding]
+			<a class='center' href="">Funding page link</a>
 		</div>
 	</section>
-	<section>
-		<h3 class='center'>Search for and View Classrooms to Support</h3>
-		<p class='center'>
-			Our advanced search form makes it easy to find the perfect 
-			organization where you can donate to your favorite classroom projects.
-		</p>
-		<div class='nav__list center'>
-			<button class='btn'>
-				Find a classroom to support
-			</button>
-		</div>
-	</section>
+<!-- End of Feature Classroom -->
 	<footer>
 		<p>
 			Footer

@@ -98,6 +98,34 @@ footer {
 	padding: 1.5rem;
 }
 
+form.search input[type=search] {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    width: 60vh;
+    background: #f1f1f1;
+}
+
+.search-field {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form.search button {
+    float: right;
+    width: 40vh;
+    padding: 10px;
+    background: grey;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none;
+    cursor: pointer;
+  }
+
+
 footer {
 	font-family: var(--ff-primary);
 	text-align: center;
