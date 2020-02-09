@@ -4,7 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-		<title>Start Small</title>
+		<title>Search Page</title>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
 		<link href="https://fonts.googleapis.com/css?family=Lora:400,700|Roboto+Slab:400,700&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
@@ -183,30 +183,47 @@
 	<form
 		class="search"
 		action="" >
+		<div>
 		<input 
 			type="search"
 			placeholder="Search for a school or classroom project" 
 			name="projectsearch">
-			near
 		<input 
 			type="search"
 			placeholder="city or state" 
 			name="location">
-		<button type="submit"><i class="fa fa-search">Search</i></button>
+		<button type="submit">Search</button>
+	</div>
 	  </form>
 	</section>
 <!-- End of Search Button -->
 
 <!-- Feature classroom -->
 	<section>
-		<div>
-			<p>[Name of school]</p>
-		<div>
-			<p>[fullfillment description from classroom teachers]</p>
-		</div>
-		<div>
-			<img src="https://bhmsmiles.com/wp-content/uploads/2016/12/grey-box-placeholder.jpg" alt="image">[image of a classroom that needs funding]
-			<a class='center' href="">Funding page link</a>
+		<div class='feature'>
+			<div class='feature-1'>
+				<p>{Name of school}</p>
+			</div>
+			<div class='feature-1'>
+				<p>{fullfillment description from classroom teachers}</p>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+					rovident voluptatibus expedita inventore tempore ipsa molestias, 
+					enim recusandae officia aut fuga nostrum harum velit, nobis 
+					quisquam!</p>
+			</div>
+			<div class='feature-1'>
+				<img 
+				class='feature-img'
+				src="https://bhmsmiles.com/wp-content/uploads/2016/12/grey-box-placeholder.jpg" 
+				alt="image">
+			</div>
+			<div>
+				<a 
+				href="https://secure.donorschoose.org/donors/givingCart.html?proposalid=4592693&donationAmount=45&utm_source=api&utm_medium=feed&utm_content=fundlink&utm_campaign=DONORSCHOOSE"
+				target='_blank'>
+				{Funding page link}
+				</a>
+			</div>
 		</div>
 	</section>
 <!-- End of Feature Classroom -->
@@ -216,4 +233,5 @@
 		</p>
 	</footer>
 </body>
+<script src="./index.js"></script>
 </hml>
