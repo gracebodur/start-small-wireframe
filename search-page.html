@@ -13,9 +13,10 @@
 	</head>
 	<body>
 	<header>
+		<!-- Navigation -->
 		<nav class='nav'>
 		<div class='logo'>
-			<a href="#search">
+			<a href="./index.html">
 				<img src='./img/start-small-logo.png' alt="logo">
 			</a>
 		</div>
@@ -42,6 +43,8 @@
 				</a>
 			</p>
 		</nav>
+		<!-- End of Navigation -->
+
 		<!-- Donate Modal--> 
 			<div id="id01" class="w3-modal">
 				<div class="w3-modal-content w3-card-4 w3-animate-zoom" style="max-width: 50vh;">
@@ -69,46 +72,43 @@
 						<h3>Register</h3>
 						<p>Please fill in this form to create an account.</p>
 					</div>
-				<form class="w3-container" method="post" target="_blank">
+				<form
+					onsubmit='registerSubmit()'
+					name='registration' 
+					class="w3-container" 
+					method="post" 
+					target="_blank">
 					<div class="w3-section">
-					<label><b>First name</b></label>
-				  	<input 
+					<label><b>Full name</b></label>
+					  <input
+					  	id='register_fullname'
 					  	class="w3-input w3-border w3-margin-bottom" 
 					  	type="text" 
-					  	placeholder="Enter your first name" 
-					  	name="fname" 
-						  required>
-					<label><b>Last name</b></label>
-					<input 
-						class="w3-input w3-border w3-margin-bottom" 
-						type="text" 
-						placeholder="Enter your last name" 
-						name="e-mail" 
+					  	placeholder="Enter your full name" 
+					  	name="r_fullname" 
 						required>
 					<label><b>User name</b></label>
-					<input 
+					<input
+						id='register_username'
 						class="w3-input w3-border w3-margin-bottom" 
 						type="text" 
 						placeholder="Enter your user name" 
-						name="e-mail" 
+						name="r_username"  
 						required>
-				  	<label><b>E-mail address</b></label>
-				  	<input 
-					  	class="w3-input w3-border w3-margin-bottom" 
-					  	type="text" 
-					  	placeholder="Enter e-mail address" 
-					  	name="e-mail" 
-					  	required>
 				  	<label><b>Password</b></label>
-				  	<input 
+					  <input
+					  	id='register_password' 
 						class="w3-input w3-border" 
 						type="password" 
 						placeholder="Enter Password" 
-						name="psw" 
+						name="r_password" 
 						required>
-				  	<button 
+					  <button
+					  	id='register' 
+					  	value='login' 
 					  	class="w3-button w3-block w3-grey w3-section w3-padding" 
-					  	type="submit">
+						type="submit"
+						onclick='registerSubmit()'>
 					  	Register
 					</button>
 					</div>
@@ -135,29 +135,39 @@
 						class="w3-button w3-xlarge w3-hover-red w3-display-topright" 
 						title="Close Modal">&times;
 					</span>
-						<h3>Log in</h3>
+						<h3>User Log in</h3>
 				</div>
-			<form class="w3-container" method="post" target="_blank">
+			<form
+				onsubmit='loginSubmit()'
+				name='login' 
+				class="w3-container" 
+				method="post" 
+				target="_blank">
 				<div class="w3-section">
 			  	<label><b>Username</b></label>
-			  	<input 
+				<input 
+					id='username'
 					class="w3-input w3-border w3-margin-bottom" 
 					type="text" 
 					placeholder="Enter Username" 
 					name="usrname" 
 					required>
 			  	<label><b>Password</b></label>
-			  	<input 
+				  <input
+					id='login_password'
 					class="w3-input w3-border" 
 					type="password" 
 					placeholder="Enter Password" 
-					name="psw" 
+					name="l_password" 
 					required>
-			  	<button 
-				  	class="w3-button w3-block w3-grey w3-section w3-padding" 
-				  	type="submit">
-				  	Login
-				</button>
+				  <button
+				  	id='submit' 
+			  		class="w3-button w3-block w3-grey w3-section w3-padding" 
+					type='submit'
+					value='login' 
+					onclick='loginSubmit()'>
+			  		Login
+				  </button>
 			  	<input 
 					class="w3-check w3-margin-top" 
 					type="checkbox" 
@@ -192,11 +202,30 @@
 			type="search"
 			placeholder="city or state" 
 			name="location">
-		<button type="submit">Search</button>
-	</div>
+		<button 
+			type="button"
+			onclick="document.getElementById('id04').style.display='block'">
+			Search
+		</button>
+	<!-- Error Modal--> 
+		<div id="id04" class="w3-modal">
+			<div class="w3-modal-content w3-card-4 w3-animate-zoom" style="max-width: 50vh;">
+			  <div class="w3-center"><br>
+				<span 
+					onclick="document.getElementById('id04').style.display='none'" 
+					class="w3-button w3-xlarge w3-hover-grey w3-display-topright close" 
+					title="Close Modal">&times;
+				</span>
+					<h3>We weren't able to find any projects in "{city/state} matching "{search term}"</h3>
+					<p>You may want to start over</p>
+			  </div>
+			</div>
+		</div>
+	<!-- End of Error Modal -->
+		</div>
 	  </form>
 	</section>
-<!-- End of Search Button -->
+<!-- End of Search Field -->
 
 <!-- Feature classroom -->
 	<section>
@@ -227,6 +256,7 @@
 		</div>
 	</section>
 <!-- End of Feature Classroom -->
+
 	<footer>
 		<p>
 			Footer

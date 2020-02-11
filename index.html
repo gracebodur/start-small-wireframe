@@ -52,46 +52,43 @@
 					<h3>Register</h3>
 					<p>Please fill in this form to create an account.</p>
 				</div>
-			<form class="w3-container" method="post" target="_blank">
+			<form
+				onSubmit='registerSubmit()'
+				name='registration'
+				class="w3-container" 
+				method="post" 
+				target="_blank">
 				<div class="w3-section">
-				<label><b>First name</b></label>
-			  	<input 
+				<label><b>Full name</b></label>
+				  <input
+					id='register_fullname'
 				  	class="w3-input w3-border w3-margin-bottom" 
 				  	type="text" 
-				  	placeholder="Enter your first name" 
-				  	name="fname" 
-					  required>
-				<label><b>Last name</b></label>
-				<input 
-					class="w3-input w3-border w3-margin-bottom" 
-					type="text" 
-					placeholder="Enter your last name" 
-					name="e-mail" 
+				  	placeholder="Enter your full name" 
+				  	name="r_fullname" 
 					required>
 				<label><b>User name</b></label>
-				<input 
+				<input
+					id='register_username'
 					class="w3-input w3-border w3-margin-bottom" 
 					type="text" 
 					placeholder="Enter your user name" 
-					name="e-mail" 
+					name="r_username" 
 					required>
-			  	<label><b>E-mail address</b></label>
-			  	<input 
-				  	class="w3-input w3-border w3-margin-bottom" 
-				  	type="email" 
-				  	placeholder="Enter e-mail address" 
-				  	name="e-mail" 
-				  	required>
 			  	<label><b>Password</b></label>
-			  	<input 
+				  <input
+				  	id='register_password' 
 					class="w3-input w3-border" 
 					type="password" 
 					placeholder="Enter Password" 
-					name="register-psw" 
+					name="r_password" 
 					required>
-			  	<button 
-				  	class="w3-button w3-block w3-grey w3-section w3-padding" 
-				  	type="submit">
+				  <button
+				  	id='register' 
+					value='login' 
+					class="w3-button w3-block w3-grey w3-section w3-padding" 
+					type="submit"
+					onclick='registerSubmit()'>
 				  	Register
 				</button>
 				</div>
@@ -120,7 +117,12 @@
 				</span>
 					<h3>User Log in</h3>
 			</div>
-		<form class="w3-container" method="post" target="_blank">
+		<form
+			onSubmit='loginSubmit()'
+			name='login' 
+			class="w3-container" 
+			method="post" 
+			target="_blank">
 			<div class="w3-section">
 		  	<label><b>Username</b></label>
 			  <input 
@@ -132,11 +134,11 @@
 				required>
 		  	<label><b>Password</b></label>
 			  <input 
-			  	id='password'
+			  	id='login_password'
 				class="w3-input w3-border" 
 				type="password" 
 				placeholder="Enter Password" 
-				name="login-psw" 
+				name="l_password" 
 				required>
 			  <button
 			  	id='submit' 

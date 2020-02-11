@@ -127,6 +127,10 @@ form.search button {
     cursor: pointer;
 }
 
+.feature-1 img,
+.feature-2 img {
+    max-width: 300px;
+}
 
 footer {
 	font-family: var(--ff-primary);

@@ -6,145 +6,139 @@
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 		<title>Users Page</title>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
-		<link href="https://fonts.googleapis.com/css?family=Lora:400,700|Roboto+Slab:400,700&display=swap" rel="stylesheet">  
+		<link href="https://fonts.googleapis.com/css?family=Lora:400,700|Roboto+Slab:400,700&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
 		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 		<link rel="stylesheet" href="main.css" />
 	</head>
 	<body>
 	<header>
 		<nav class='nav'>
-		<div class='logo'>
-			<a href="#landing">
-				<img src='./img/start-small-logo.png' alt="logo">
-			</a>
-		</div>
-		<div class='nav__list'>
-			<a href="./search-page.html">
-				<button class='btn'>
-				Find a classroom to support
-				</button>
-		</a>
-		</div>
-			<p class="nav__item">
-				<a 
-					href="#donate" 
-					class="nav__list" 
-					onclick="document.getElementById('id01').style.display='block'">
-					Donate
+			<div class='logo'>
+				<a href="./index.html">
+					<img src='./img/start-small-logo.png' alt="logo">
 				</a>
-			</p>
-			<p class="nav__item">
-				<a 
-					href="#register-signin" 
-					class="nav__list" onclick="document.getElementById('id01').style.display='block'">
-					Register
-				</a>
-			</p>
-			<p class="nav__item">
-				<a 
-					href="#register-signin" 
-					class="nav__list" onclick="document.getElementById('id01').style.display='block'">
-					Log out
-				</a>
-			</p>
-		</nav>
-		<!-- Modal -->
-			<div id="id01" class="w3-modal">
-				<div class="w3-modal-content w3-card-4 w3-animate-zoom" style="max-width:600px">
-			  		<div class="w3-center"><br>
-						<span 
-							onclick="document.getElementById('id01').style.display='none'" 
-							class="w3-button w3-xlarge w3-hover-red w3-display-topright" 
-							title="Close Modal">&times;
-						</span>
-						<h3>Log in</h3>
-			  		</div>
-				<form class="w3-container" action="/action_page.php">
-				<div class="w3-section">
-				  <label><b>E-mail address</b></label>
-				  <input 
-					  class="w3-input w3-border w3-margin-bottom" 
-					  type="text" 
-					  placeholder="Enter e-mail address" 
-					  name="e-mail" 
-					  required>
-				  <label><b>Password</b></label>
-				  <input 
-					  class="w3-input w3-border" 
-					  type="password" 
-					  placeholder="Enter Password" 
-					  name="psw" 
-					  required>
-				  <button 
-					  class="w3-button w3-block w3-grey w3-section w3-padding" 
-					  type="submit">
-					  Login
-					</button>
-				  <input 
-					  class="w3-check w3-margin-top" 
-					  type="checkbox" 
-					  checked="checked"> 
-					  Remember me
-				</div>
-			  </form>
-		
-			  <div class="w3-container w3-border-top w3-padding-16 w3-light-grey">
-				<button 
-					onclick="document.getElementById('id01').style.display='none'" 
-					type="button" 
-					class="w3-button w3-grey">
-					Cancel
-				</button>
-				<span 
-					class="w3-right w3-padding w3-hide-small">
-					Forgot
-					<a href="#">
-					password?
-					</a>
-				</span>
-			  </div>
 			</div>
+				<p class="nav__item">
+					<a 
+						href="#log-in" 
+						class="nav__list" onclick="usersLogout()">
+						Log out
+					</a>
+				</p>
+		</nav>
+	</header>
+		
+<!-- Search Field -->
+	<section class='search-field'>
+	<form
+		class="search"
+		action="" >
+		<div>
+		<input 
+			type="search"
+			placeholder="Search for a school or classroom project" 
+			name="projectsearch">
+		<input 
+			type="search"
+			placeholder="city or state" 
+			name="location">
+		<button
+			type="button"
+			onclick="document.getElementById('id04').style.display='block'">
+			Search
+		</button>
+	<!-- Error Modal--> 
+	<div id="id04" class="w3-modal">
+		<div class="w3-modal-content w3-card-4 w3-animate-zoom" style="max-width: 50vh;">
+		  <div class="w3-center"><br>
+			<span 
+				onclick="document.getElementById('id04').style.display='none'" 
+				class="w3-button w3-xlarge w3-hover-grey w3-display-topright close" 
+				title="Close Modal">&times;
+			</span>
+				<h3>We weren't able to find any projects in "{city/state} matching "{search term}"</h3>
+				<p>You may want to start over</p>
 		  </div>
 		</div>
-	</header>
+	</div>
+<!-- End of Error Modal -->
+	</div>
+  </form>
+</section>
+<!-- End of Search Button -->
 
-	<!-- Intro -->
-	<section role="banner" id='landing'>
-		<h1 class='center'>Start Small</h1>
-		<h3 class='center'>Make a big difference!</h3>
-		<div class='center'>
-			<ul>
-				<li>Pick a classroom project for your friends to support.</li>
-				<li>Add a personal message.</li>
-				<li>See your impact!</li>
-			</ul>
-		</div>
-	</section>
+<!-- Feature-1 classroom -->
 	<section>
-		<p>"Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-			Laborum veniam quos atque nisi excepturi delectus pariatur placeat, 
-			veritatis in consectetur!"</p>
-		<p>[placeholder for a fullfillment description from classroom teachers]</p>
-		<div class='center'>
-			<p>[place holder for an image of a classroom that needs funding]</p>
+		<div class='feature'>
+			<div class='feature-1'>
+				<p>{Name of school}</p>
+			</div>
+			<div class='feature-1'>
+				<p>{fullfillment description from classroom teachers}</p>
+				<img src='./img/heart-fill.png'><i class="ri-heart-fill"></i></>
+				<img src='./img/delete-bin-line.png'><i class="ri-delete-bin-line"></i></>
+			</div>
+			<div class='feature-1'>
+				<img 
+				class='feature-img'
+				src="https://bhmsmiles.com/wp-content/uploads/2016/12/grey-box-placeholder.jpg" 
+				alt="image">
+				<p>{short classroom project description}</p>
+			</div>
+			<div>
+				<a 
+				href="https://secure.donorschoose.org/donors/givingCart.html?proposalid=4592693&donationAmount=45&utm_source=api&utm_medium=feed&utm_content=fundlink&utm_campaign=DONORSCHOOSE"
+				target='_blank'>
+				{Funding page link}
+				</a>
+				<div>
+					<span>Share this project: </span>
+					<div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
+				</div>
+			</div>
 		</div>
 	</section>
-	<section>
-		<h3 class='center'>Search for and View Classrooms to Support</h3>
-		<p class='center'>
-			Our advanced search form makes it easy to find the perfect 
-			organization where you can donate to your favorite classroom projects.
-		</p>
-		<div class='nav__list center'>
-			<button class='btn'>
-				Find a classroom to support
-			</button>
+<!-- End of Feature-1 Classroom -->
+<!-- Feature-2 classroom -->
+<section>
+	<div class='feature'>
+		<div class='feature-2'>
+			<p>{Name of school}</p>
 		</div>
-	</section>
+		<div class='feature-2'>
+			<p>{fullfillment description from classroom teachers}</p>
+				<img src='./img/heart-fill.png'><i class="ri-heart-fill"></i></>
+				<img src='./img/delete-bin-line.png'><i class="ri-delete-bin-line"></i></>
+			
+		</div>
+		<div class='feature-2'>
+			<img 
+			class='feature-img'
+			src="https://bhmsmiles.com/wp-content/uploads/2016/12/grey-box-placeholder.jpg" 
+			alt="image">
+			<p>{short classroom project description}</p>
+		</div>
+		<div>
+			<a 
+			href="https://secure.donorschoose.org/donors/givingCart.html?proposalid=4592693&donationAmount=45&utm_source=api&utm_medium=feed&utm_content=fundlink&utm_campaign=DONORSCHOOSE"
+			target='_blank'>
+			{Funding page link}
+			</a>
+			<div>
+				<span>Share this project: </span>
+				<div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- End of Feature-1 Classroom -->
 	<footer>
 		<p>
 			Footer
 		</p>
 	</footer>
 </body>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v6.0"></script>
+<script src="./index.js"></script>
 </hml>
